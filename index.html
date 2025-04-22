@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linksys Capital Advisory - Impact Investments for Africa</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap">
+</head>
+<body>
+    <div id="splashscreen">
+        <div class="splash-content">
+            <div class="splash-logo">
+                <img src="images/Photos-du-Site Web/Logo-site.png" alt="Logo" class="splash-logo-img splash-animate" />
+            </div>
+        </div>
+    </div>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="social-icons">
+                <a href="#" class="social-icon linkedin"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/></svg></a>
+                <a href="#" class="social-icon twitter"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"/></svg></a>
+            </div>
+            <div class="contact-info">
+                <a href="mailto:Info@Linksyscapital.Com" class="email">Info@Linksyscapital.Com</a>
+                <span class="separator">|</span>
+                <a href="tel:+689893487" class="phone">689 89 34 87 - 653 90 29 74</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/Photos-du-Site Web/Logo-site.png" alt="Linksys Capital Advisory">
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#">Qui Sommes-Nous ?</a></li>
+                    <li class="dropdown">
+                        <a href="#">Pool Conseils <span class="dropdown-arrow">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Pool Entreprises</a></li>
+                            <li><a href="#">Pool Investisseurs</a></li>
+                            <li><a href="#">Pool Gouvernements</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <button class="search-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/></svg>
+                </button>
+                <a href="#" class="btn btn-primary">START CONSULT</a>
+            </div>
+            <button class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero fade-in-scroll">
+        <img class="hero-bg-img" src="images/Photos-du-Site Web/Carroussel 2.jpeg" alt="Fond Hero Noir et Blanc" loading="lazy" />
+        <div class="hero-slider">
+            <div class="hero-slide active">
+                <div class="container">
+                    <div class="hero-content">
+                        <div class="africa-map floating-map zoom-in-scroll" data-aos="fade-right" data-aos-duration="1000">
+                            <div id="interactive-map">
+                                <div class="map-container">
+                                    <!-- SVG importé -->
+                                    <object id="africa-svg" class="africa-neon parallax-img" type="image/svg+xml" data="africa-map-svgrepo-com.svg" width="500" height="450" style="display:block;margin:auto;"></object>
+                                    <!-- Points d'action Lynksis -->
+                                    <div class="map-action-point" id="point-cameroun" data-name="Cameroun" data-project="Levées de Fonds, Collaboration Farine locale, Fondation Mika" data-detail="Gestion du portefeuille, structuration filière, œuvres caritatives"></div>
+                                    <div class="map-action-point" id="point-niger" data-name="Niger" data-project="Levées de Fonds" data-detail="Gestion du portefeuille, Levées de Fonds"></div>
+                                    <div class="map-action-point" id="point-burkina" data-name="Burkina Faso" data-project="Levées de Fonds" data-detail="Levées de Fonds"></div>
+                                    <div class="map-action-point" id="point-gabon" data-name="Gabon" data-project="Gestion du portefeuille résiduel" data-detail="Gestion du portefeuille"></div>
+                                    <div class="map-action-point" id="point-senegal" data-name="Sénégal" data-project="Gestion du portefeuille, Levées de Fonds" data-detail="Gestion du portefeuille, Levées de Fonds"></div>
+                                    <div class="map-action-point" id="point-mozambique" data-name="Mozambique" data-project="Gestion du portefeuille résiduel" data-detail="Gestion du portefeuille"></div>
+                                    <!-- Tooltip -->
+                                    <div id="tooltip" class="map-tooltip">
+                                        <h4 class="country-name"></h4>
+                                        <p class="project-title"></p>
+                                        <p class="project-detail"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hero-text slide-in-left fade-in-scroll" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
+                            <div class="impact-tag">
+                                <span class="red-triangle">&#9650;</span>
+                                <span>IMPACT INVESTMENTS FOR AFRICA</span>
+                            </div>
+                            <h1 class="typewriter-hero">LINKSYS CAPITAL ADVISORY</h1>
+                            <p class="fade-in-scroll">est une société de Gestion de Fonds (Fund Manager), établie au Cameroun, spécialisée dans les investissements à fort impact social, environnemental et financier en Afrique.</p>
+                            <a href="#" class="btn btn-secondary fade-in-scroll">
+                                EN SAVOIR + 
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-controls">
+            <button class="hero-control active"></button>
+            <!-- Ajoutez plus de boutons si nécessaire pour d'autres slides -->
+        </div>
+    </section>
+
+    <!-- Pool Conseils Section -->
+    <section class="pool-conseils fade-in-scroll">
+        <div class="container">
+            <div class="section-header slide-in-left" data-aos="fade-up" data-aos-duration="800">
+                <div class="red-triangle">&#9650;</div>
+                <h2>POOL CONSEILS</h2>
+            </div>
+            <h3 class="zoom-in-scroll" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">Pourquoi Nous Consulter</h3>
+            
+            <div class="services-grid">
+                <div class="service-card fade-in-scroll" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                    <div class="icon-circle parallax-img">
+                        <img src="images/icon-buildings.svg" alt="Gouvernements Icon">
+                    </div>
+                    <h4>GOUVERNEMENTS</h4>
+                    <p>Accompagnement Stratégique et Institutionnel<br>
+                    Assistance Technique · Projets Structurants<br>
+                    Levées De Fonds</p>
+                </div>
+                
+                <div class="service-card active fade-in-scroll" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
+                    <div class="icon-circle parallax-img">
+                        <img src="images/icon-finance.svg" alt="Financement Icon">
+                    </div>
+                    <h4>FINANCEMENT</h4>
+                    <p>LINKSYS CAPITAL ADVISORY RECHERCHE ACTUELLEMENT PLUS DE USD 500 MILLIONS POUR SES PARTENAIRES</p>
+                </div>
+                
+                <div class="service-card fade-in-scroll" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700">
+                    <div class="icon-circle parallax-img">
+                        <img src="images/icon-experts.svg" alt="Experts Icon">
+                    </div>
+                    <h4>EXPERTS</h4>
+                    <p>VOUS ÊTES UN EXPERT DANS VOTRE DOMAINE D'ACTIVITÉS ET INTÉRESSÉ PAR L'ACTION DE LINKSYS CAPITAL EN AFRIQUE. LAISSEZ-NOUS VOTRE CV</p>
+                </div>
+            </div>
+            
+            <div class="slider-controls">
+                <button class="prev-btn">&#8592;</button>
+                <button class="next-btn">&#8594;</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section class="vision fade-in-scroll vision-bg">
+        <div class="container">
+            <div class="vision-content">
+                <div class="vision-text-container slide-in-left" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
+                    <div class="vision-text">
+                        <div class="impact-tag">
+                            <span class="red-triangle">&#9650;</span>
+                            <span>LINKSYS CAPITAL ADVISORY</span>
+                        </div>
+                        <h2>VISION</h2>
+                        <p>Nous pensons que tout effort visant à réduire la pauvreté en Afrique doit avoir à la base, la promotion de l'entrepreneuriat au sein du secteur Informel.</p>
+                        <p>Notre vision est de mobiliser des capitaux afin de soutenir les entrepreneurs et initiatives économiques comme moyens de parvenir à la croissance et à la durabilité d'une manière respectueuse de l'environnement, tout en offrant des rendements financiers élevés aus Investisseurs.</p>
+                        <a href="#" class="btn btn-secondary">
+                            EN SAVOIR + 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team fade-in-scroll">
+        <div class="container">
+            <div class="section-header slide-in-left" data-aos="fade-up" data-aos-duration="800">
+                <div class="red-triangle">&#9650;</div>
+                <h2>NOTRE EQUIPE</h2>
+            </div>
+            <p class="team-intro zoom-in-scroll" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">L'équipe principale possède une vaste expérience dans les domaines du capital investissement, de la banque d'investissement, de la gestion financière et du conseil en gestion. Cette équipe établie et expérimentée apporte à Linksys capital advisory un énorme avantage concurrentiel pour toute intervention dans l'environnement socioéconomique en Afrique</p>
+            
+            <h3 class="fade-in-scroll" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">TOP MANAGEMENT</h3>
+            
+            <div class="team-grid">
+                <div class="team-member fade-in-scroll" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                    <div class="member-photo parallax-img">
+                        <img src="images/Photos-du-Site Web/Jean Claude EBE EVINA, Président.png" alt="Jean Claude EBE EVINA">
+                    </div>
+                    <h4>Jean Claude EBE EVINA,</h4>
+                    <p>Président</p>
+                </div>
+                
+                <div class="team-member fade-in-scroll" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
+                    <div class="member-photo parallax-img">
+                        <img src="images/Photos-du-Site Web/Henri Blaise TIAM, Managing Partner.png" alt="Henri Blaise TIAM">
+                    </div>
+                    <h4>Henri Blaise TIAM</h4>
+                    <p>Managing Partner</p>
+                </div>
+                
+                <div class="team-member fade-in-scroll" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
+                    <div class="member-photo parallax-img">
+                        <img src="images/Photos-du-Site Web/Didier ZING, Administrateur.png" alt="Didier ZING">
+                    </div>
+                    <h4>Didier ZING</h4>
+                    <p>Administrateur</p>
+                </div>
+                
+                <div class="team-member fade-in-scroll" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700">
+                    <div class="member-photo parallax-img">
+                        <img src="images/Photos-du-Site Web/Eric ELOUNDOU, Administrateur.png" alt="Eric ELOUNDOU">
+                    </div>
+                    <h4>Eric ELOUNDOU</h4>
+                    <p>Administrateur</p>
+                </div>
+            </div>
+            
+            <h3 class="fade-in-scroll" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">MANAGEMENT</h3>
+            
+            <div class="management-member fade-in-scroll" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                <div class="member-photo parallax-img">
+                    <img src="images/Photos-du-Site Web/Yves Alain SECKE Consultant Formateur expert en management financier.jpeg" alt="Yves Alain SECKE">
+                </div>
+                <h4>Yves Alain SECKE</h4>
+                <p>Consultant Formateur expert en management financier</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blog fade-in-scroll">
+        <div class="container">
+            <div class="section-header slide-in-left" data-aos="fade-up" data-aos-duration="800">
+                <div class="red-triangle">&#9650;</div>
+                <h2>BLOG</h2>
+            </div>
+            <h3 class="zoom-in-scroll" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">Publication</h3>
+            
+            <div class="blog-grid">
+                <div class="blog-card fade-in-scroll" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                    <div class="blog-image parallax-img">
+                        <img src="images/Photos-du-Site Web/Blog 1.jpeg" alt="Énergies Renouvelable">
+                        <div class="blog-category">ENERGIES RENOUVELABLE</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-date">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/></svg>
+                            MARCH 16, 2025
+                        </div>
+                        <h4>Énergies Renouvelable : État Des Lieux En Afrique</h4>
+                    </div>
+                </div>
+                
+                <div class="blog-card fade-in-scroll" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
+                    <div class="blog-image parallax-img">
+                        <img src="images/Photos-du-Site Web/Blog 2.jpeg" alt="Banque">
+                        <div class="blog-category">FINANCE</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-date">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/></svg>
+                            MARCH 16, 2025
+                        </div>
+                        <h4>Banque : État Des Lieux En Afrique</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="partners">
+        <div class="container">
+            <h3 data-aos="fade-up" data-aos-duration="800">Nos Partenaires</h3>
+            
+            <div class="partners-grid">
+                <div class="partner-logo fade-in-scroll" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <img class="partner-anim" src="images/Photos-du-Site Web/Huckabee.png" alt="Huckabee">
+                </div>
+                <div class="partner-logo fade-in-scroll" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                    <img class="partner-anim" src="images/Photos-du-Site Web/Jacobs.png" alt="Jacobs">
+                </div>
+                <div class="partner-logo fade-in-scroll" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                    <img class="partner-anim" src="images/Photos-du-Site Web/Clarifai.png" alt="Clarifai">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/Photos-du-Site Web/Logo-white.png" alt="Linksys Capital Advisory">
+                    <div class="footer-social">
+                        <a href="#" class="social-icon twitter">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"/></svg>
+                        </a>
+                        <a href="#" class="social-icon linkedin">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Liens Rapides</h4>
+                    <ul>
+                        <li><a href="#">Qui Sommes-Nous</a></li>
+                        <li><a href="#">Pool Entreprises</a></li>
+                        <li><a href="#">Pool Investisseurs</a></li>
+                        <li><a href="#">Pool Gouvernements</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
+                        </div>
+                        <div class="contact-text">
+                            <strong>Address:</strong> Villa La Rose, 2e Étage<br>
+                            40, Rue 1079 - Quartier Hippodrome<br>
+                            Yaoundé - Cameroun
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/></svg>
+                        </div>
+                        <div class="contact-text">
+                            <strong>Email:</strong> Info@Linksyscapital.Com
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M3.654 1.328a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/></svg>
+                        </div>
+                        <div class="contact-text">
+                            <strong>Phone:</strong> 689 89 34 87 - 653 90 29 74
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
+                        </div>
+                        <div class="contact-text">
+                            <strong>Work Time:</strong> Mon-Fri: 08:00 - 16:00
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-images">
+                    <div class="vertical-carousel">
+                        <div class="carousel-container">
+                            <div class="carousel-track">
+                                <img src="images/Photos-du-Site Web/Carroussel 1.jpeg" alt="Carroussel 1">
+                                <img src="images/Photos-du-Site Web/Carroussel 2.jpeg" alt="Carroussel 2">
+                                <img src="images/Photos-du-Site Web/Carroussel 3.jpeg" alt="Carroussel 3">
+                                <img src="images/Photos-du-Site Web/Carroussel 1.jpeg" alt="Carroussel 1">
+                                <img src="images/Photos-du-Site Web/Carroussel 2.jpeg" alt="Carroussel 2">
+                                <img src="images/Photos-du-Site Web/Carroussel 3.jpeg" alt="Carroussel 3">
+                            </div>
+                            <div class="carousel-dots-vertical">
+                                <span class="dot dot-gold"></span>
+                                <span class="dot dot-gray"></span>
+                                <span class="dot dot-dark"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 LINKSYS CAPITAL.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chatbox Lynka -->
+    <div class="chatbox-container">
+        <div class="chatbox-toggle">
+            <div class="chatbox-toggle-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6-.097 1.016-.417 2.13-.771 2.966-.079.186.074.394.273.362 2.256-.37 3.597-.938 4.18-1.234A9.06 9.06 0 0 0 8 15z"/>
+                </svg>
+            </div>
+            <div class="chatbox-greeting" id="chatbox-greeting">Hello, comment puis-je vous aider ?</div>
+        </div>
+        <div class="chatbox">
+            <div class="chatbox-header">
+                <div class="chatbox-title">
+                    <h3>Lynka</h3>
+                    <p>Assistante virtuelle</p>
+                </div>
+                <button class="chatbox-close">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="chatbox-body">
+                <div class="chatbox-welcome">
+                    <div class="lynka-avatar">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+                        </svg>
+                    </div>
+                    <div class="welcome-message">
+                        <p>Bonjour ! Je suis Lynka, Comment puis-je vous aider aujourd'hui ?</p>
+                    </div>
+                </div>
+                <div class="chatbox-faq">
+                    <p>Questions fréquentes :</p>
+                    <div class="faq-buttons">
+                        <button class="faq-button" data-question="Que fait votre entreprise ?">Que fait votre entreprise ?</button>
+                        <button class="faq-button" data-question="Où êtes-vous basés ?">Où êtes-vous basés ?</button>
+                        <button class="faq-button" data-question="Comment vous contacter ?">Comment vous contacter ?</button>
+                        <button class="faq-button" data-question="Quels sont vos domaines d'investissement ?">Quels sont vos domaines d'investissement ?</button>
+                    </div>
+                </div>
+                <div class="chatbox-messages"></div>
+            </div>
+            <div class="chatbox-footer">
+                <form id="chatbox-form">
+                    <input type="text" id="chatbox-input" placeholder="Écrivez votre message...">
+                    <button type="submit" class="chatbox-send">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083l6-15Zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471-.47 1.178Z"/>
+                    </svg>
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/></svg>
+    </a>
+
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
