@@ -1451,35 +1451,24 @@ img {
 }
 
 /* Animations de scroll et d'apparition */
-.fade-in-scroll {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 0.7s cubic-bezier(.77,0,.18,1) 0.1s, transform 0.7s cubic-bezier(.77,0,.18,1) 0.1s;
+.animated-scroll {
+  opacity: 0;
+  transition: opacity 0.7s cubic-bezier(.77,0,.18,1),
+              transform 0.7s cubic-bezier(.77,0,.18,1);
+  will-change: opacity, transform;
 }
-.fade-in-scroll.visible {
-    opacity: 1;
-    transform: translateY(0);
+.animated-scroll.in-view {
+  opacity: 1;
+  transform: none !important;
 }
+.fade-up { transform: translateY(40px); }
+.fade-left { transform: translateX(-40px); }
+.fade-right { transform: translateX(40px); }
+.zoom-in { transform: scale(0.8); }
 
-.slide-in-left {
-    opacity: 0;
-    transform: translateX(-60px);
-    transition: opacity 0.7s cubic-bezier(.77,0,.18,1), transform 0.7s cubic-bezier(.77,0,.18,1);
-}
-.slide-in-left.visible {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-.zoom-in-scroll {
-    opacity: 0;
-    transform: scale(0.85);
-    transition: opacity 0.7s cubic-bezier(.77,0,.18,1), transform 0.7s cubic-bezier(.77,0,.18,1);
-}
-.zoom-in-scroll.visible {
-    opacity: 1;
-    transform: scale(1);
-}
+/* Pour que le texte ait un effet plus moderne */
+.animated-scroll.text-modern { letter-spacing: 0.03em; filter: blur(3px); transition: filter 0.7s, letter-spacing 0.7s; }
+.animated-scroll.in-view.text-modern { filter: blur(0); letter-spacing: 0.01em; }
 
 /* Effet typewriter sur le titre */
 .typewriter-hero {
@@ -1579,74 +1568,17 @@ img {
         right: -15px;
         left: 1vw;
     }
-}
-
-@media (max-width: 600px) {
-  html, body {
-    width: 100vw !important;
-    max-width: 100vw !important;
-    overflow-x: hidden !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-  .container, .header, .top-bar, .footer, .footer-content, .main-nav, .hero-content, .map-container, section, article, .services-grid, .partners-grid, .blog-grid {
-    width: 100% !important;
-    max-width: 100vw !important;
-    min-width: 0 !important;
-    box-sizing: border-box !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    overflow-x: hidden !important;
-  }
-  .hero-content, .footer-content, .header .container, .top-bar .container, .section-title, .hero-text, .contact-info, .blog-grid > *, .services-grid > *, .partners-grid > * {
-    padding-left: 10px !important;
-    padding-right: 10px !important;
-    box-sizing: border-box !important;
-  }
-  img, .logo img, .card img, .partner-logo img {
-    width: 100% !important;
-    max-width: 100% !important;
-    height: auto !important;
-    display: block;
-  }
-  .btn, .btn-primary, .btn-secondary {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 10px 0 !important;
-    padding: 14px 0 !important;
-    font-size: 1.07rem !important;
-    border-radius: 8px !important;
-    box-sizing: border-box !important;
-  }
-  .card, .blog-card, .service-card, .partner-card {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 14px 0 !important;
-    box-sizing: border-box !important;
-  }
-  .main-nav.active {
-    left: 0 !important;
-    right: 0 !important;
-    width: 100vw !important;
-    min-width: 0 !important;
-    box-sizing: border-box !important;
-  }
-  .map-container {
-    width: 100vw !important;
-    max-width: 100vw !important;
-    margin: 0 auto !important;
-    padding: 0 !important;
-    box-sizing: border-box !important;
-  }
-  .back-to-top, .chatbox {
-    right: 8px !important;
-    left: auto !important;
-    width: auto !important;
-    min-width: 0 !important;
-    max-width: 96vw !important;
-  }
+    
+    .footer-links ul {
+        align-items: flex-start !important;
+        text-align: left !important;
+        padding-left: 0 !important;
+    }
+    .footer-links li, .footer-links a {
+        text-align: left !important;
+        justify-content: flex-start !important;
+        width: 100%;
+    }
 }
 
 @media (max-width: 600px) {
@@ -1744,6 +1676,98 @@ img {
   }
 }
 
+@media (max-width: 600px) {
+  html, body {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .container, .header, .top-bar, .footer, .footer-content, .main-nav, .hero-content, .map-container, section, article, .services-grid, .partners-grid, .blog-grid {
+    width: 100% !important;
+    max-width: 100vw !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    overflow-x: hidden !important;
+  }
+  .hero-content, .footer-content, .header .container, .top-bar .container, .section-title, .hero-text, .contact-info, .blog-grid > *, .services-grid > *, .partners-grid > * {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    box-sizing: border-box !important;
+  }
+  img, .logo img, .card img, .partner-logo img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    display: block;
+  }
+  .btn, .btn-primary, .btn-secondary {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 10px 0 !important;
+    padding: 14px 0 !important;
+    font-size: 1.07rem !important;
+    border-radius: 8px !important;
+    box-sizing: border-box !important;
+  }
+  .card, .blog-card, .service-card, .partner-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 14px 0 !important;
+    box-sizing: border-box !important;
+  }
+  .main-nav.active {
+    left: 0 !important;
+    right: 0 !important;
+    width: 100vw !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+  .map-container {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+  }
+  .back-to-top, .chatbox {
+    right: 8px !important;
+    left: auto !important;
+    width: auto !important;
+    min-width: 0 !important;
+    max-width: 96vw !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer .quick-links, .quick-links, .footer-links, .footer .links, .liens-rapides {
+    text-align: left !important;
+    align-items: flex-start !important;
+    justify-content: flex-end !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    padding-left: 0.5rem !important;
+    padding-bottom: 1.5rem !important;
+  }
+  .footer .quick-links ul, .quick-links ul, .footer-links ul, .footer .links ul, .liens-rapides ul {
+    text-align: left !important;
+    align-items: flex-start !important;
+    justify-content: flex-end !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    padding-left: 0 !important;
+  }
+  .footer .quick-links li, .quick-links li, .footer-links li, .footer .links li, .liens-rapides li {
+    text-align: left !important;
+    margin-left: 0 !important;
+  }
+}
+
 /* Splashscreen styles */
 #splashscreen {
   position: fixed;
@@ -1811,4 +1835,39 @@ img {
   font-size: 1.1rem;
   color: #2d7df6;
   font-weight: 500;
+}
+
+@media (max-width: 600px) {
+  /* Force le bloc Liens Rapides à gauche et en bas dans le footer mobile */
+  .footer-content {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: flex-end !important;
+  }
+  .footer .quick-links, .quick-links, .footer-links, .footer .links, .liens-rapides {
+    width: 100% !important;
+    text-align: left !important;
+    align-items: flex-start !important;
+    justify-content: flex-end !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    padding-left: 0.5rem !important;
+    padding-bottom: 1.5rem !important;
+    order: 99 !important;
+  }
+  .footer .quick-links ul, .quick-links ul, .footer-links ul, .footer .links ul, .liens-rapides ul {
+    width: 100% !important;
+    text-align: left !important;
+    align-items: flex-start !important;
+    justify-content: flex-end !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    padding-left: 0 !important;
+  }
+  .footer .quick-links li, .quick-links li, .footer-links li, .footer .links li, .liens-rapides li {
+    text-align: left !important;
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
 }
