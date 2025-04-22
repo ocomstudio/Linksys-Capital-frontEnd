@@ -4,32 +4,1866 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Linksys Capital Advisory - Impact Investments for Africa</title>
-    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap">
-     <!-- SEO META TAGS -->
-    <meta name="description" content="Linksys Capital Advisory : Investissements à fort impact social, environnemental et financier en Afrique. Conseil, accompagnement, gestion de fonds, levée de fonds, stratégie institutionnelle pour investisseurs, entreprises et gouvernements africains.">
-    <meta name="keywords" content="Investissement Afrique, Impact Investing, Conseil financier, Levée de fonds, Gestion de fonds, Stratégie institutionnelle, Entrepreneuriat africain, Linksys Capital Advisory, Investisseurs, Entreprises, Gouvernements, Accompagnement, Développement, Fusions, Acquisitions, Afrique, Fonds d'investissement, Projets structurants, Assistance technique, Développement de marchés">
-    <meta name="author" content="Linksys Capital Advisory">
+    <meta name="description" content="Linksys Capital Advisory : Investissements à fort impact social, environnemental et financier en Afrique. Conseil, accompagnement, gestion de fonds.">
+    <meta name="keywords" content="Investissement Afrique, Impact Investing, Conseil financier, Levée de fonds, Gestion de fonds">
     <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Linksys Capital Advisory - Impact Investments for Africa">
-    <meta property="og:description" content="Investissez dans l'impact social, environnemental et financier en Afrique avec Linksys Capital Advisory. Découvrez nos services pour investisseurs, entreprises et gouvernements.">
-    <meta property="og:type" content="website">
+    <meta name="author" content="Linksys Capital Advisory">
+    <meta property="og:title" content="Linksys Capital Advisory - Investissements à Impact en Afrique">
+    <meta property="og:description" content="Société de gestion de fonds et conseil en investissements à fort impact social, environnemental et financier en Afrique.">
+    <meta property="og:image" content="https://linksys-capital.vercel.app/images/Photos-du-Site/Logo-site.png">
     <meta property="og:url" content="https://linksys-capital.vercel.app/">
-    <meta property="og:image" content="https://www.linksyscapital.com/images/Photos-du-Site%20Web/Logo-site.png">
+    <meta property="og:type" content="website">
     <meta property="og:locale" content="fr_FR">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Linksys Capital Advisory - Impact Investments for Africa">
-    <meta name="twitter:description" content="Investissements à fort impact social, environnemental et financier en Afrique. Conseil, accompagnement, gestion de fonds, levée de fonds, stratégie institutionnelle.">
-    <meta name="twitter:image" content="https://www.linksyscapital.com/images/Photos-du-Site%20Web/Logo-site.png">
+    <meta name="twitter:title" content="Linksys Capital Advisory - Investissements à Impact en Afrique">
+    <meta name="twitter:description" content="Investissements responsables, gestion de fonds, accompagnement stratégique, conseil en Afrique.">
+    <meta name="twitter:image" content="https://linksys-capital.vercel.app/images/Photos-du-Site/Logo-site.png">
     <link rel="canonical" href="https://linksys-capital.vercel.app/">
-    <!-- END SEO META TAGS -->
+    <style>
+        :root {
+            --primary-color: #456a65;
+            --secondary-color: #e2bc7d;
+            --accent-color: #ff5d5d;
+            --dark-color: #1a1a1a;
+            --light-color: #ffffff;
+            --gray-color: #f2f2f2;
+            --text-color: #333333;
+            --transition-fast: 0.3s ease;
+            --transition-medium: 0.5s ease;
+            --transition-slow: 0.8s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-color: var(--light-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: all var(--transition-fast);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all var(--transition-fast);
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            transition: all 0.6s ease;
+            z-index: 0;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn span {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background-color: var(--secondary-color);
+            color: var(--dark-color);
+            box-shadow: 0 4px 12px rgba(226, 188, 125, 0.2);
+        }
+
+        .btn-primary:hover {
+            background-color: #d3ad6e;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(226, 188, 125, 0.3);
+        }
+
+        .btn svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        /* Top Bar */
+        .top-bar {
+            background-color: var(--primary-color);
+            color: var(--light-color);
+            padding: 12px 0;
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        .top-bar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-icon {
+            color: var(--light-color);
+            opacity: 0.9;
+            transition: all var(--transition-fast);
+            transform: scale(1);
+        }
+
+        .social-icon:hover {
+            opacity: 1;
+            transform: scale(1.2) translateY(-2px);
+        }
+
+        .contact-info {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .contact-info a {
+            position: relative;
+        }
+
+        .contact-info a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -2px;
+            left: 0;
+            background-color: var(--secondary-color);
+            transition: width var(--transition-medium);
+        }
+
+        .contact-info a:hover {
+            color: var(--secondary-color);
+        }
+
+        .contact-info a:hover::after {
+            width: 100%;
+        }
+
+        /* Header */
+        .header {
+            background-color: var(--light-color);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            transition: all var(--transition-fast);
+        }
+
+        .header.scrolled {
+            height: 70px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            position: relative;
+            z-index: 101;
+        }
+
+        .logo img {
+            height: 60px;
+            width: auto;
+            transition: all var(--transition-fast);
+        }
+
+        .header.scrolled .logo img {
+            height: 50px;
+        }
+
+        .main-nav ul {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .main-nav a {
+            font-weight: 500;
+            color: var(--dark-color);
+            padding: 5px 2px;
+            position: relative;
+            font-size: 16px;
+        }
+
+        .main-nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--secondary-color);
+            transition: width var(--transition-medium);
+        }
+
+        .main-nav a:hover::after {
+            width: 100%;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-toggle {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .dropdown-arrow {
+            font-size: 10px;
+            transition: transform var(--transition-fast);
+        }
+
+        .dropdown:hover .dropdown-arrow {
+            transform: rotate(180deg);
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: var(--light-color);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            min-width: 220px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all var(--transition-medium);
+            z-index: 10;
+            padding: 12px 0;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu li {
+            padding: 8px 20px;
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 5px 0;
+            font-size: 15px;
+        }
+
+        /* Mobile Menu Toggle */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            width: 30px;
+            height: 22px;
+            position: relative;
+            z-index: 101;
+        }
+
+        .mobile-menu-toggle span {
+            display: block;
+            width: 100%;
+            height: 3px;
+            background-color: var(--dark-color);
+            position: absolute;
+            left: 0;
+            transition: all var(--transition-medium);
+            border-radius: 3px;
+        }
+
+        .mobile-menu-toggle span:nth-child(1) {
+            top: 0;
+        }
+
+        .mobile-menu-toggle span:nth-child(2) {
+            top: 9px;
+            width: 75%;
+        }
+
+        .mobile-menu-toggle span:nth-child(3) {
+            bottom: 0;
+        }
+
+        .mobile-menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+            background-color: var(--secondary-color);
+        }
+
+        .mobile-menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+            transform: translateX(20px);
+        }
+
+        .mobile-menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+            background-color: var(--secondary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            min-height: 600px;
+            overflow: hidden;
+            background-color: var(--dark-color);
+            color: var(--light-color);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .hero-bg-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(40%) brightness(0.6);
+            z-index: 0;
+            transition: transform 5s ease;
+        }
+
+        .hero:hover .hero-bg-img {
+            transform: scale(1.1);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            justify-content: space-between;
+            padding: 80px 0;
+            gap: 40px;
+        }
+
+        .africa-map {
+            flex: 0 0 48%;
+            position: relative;
+        }
+
+        .map-container {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            margin: 0 auto;
+        }
+
+        #africa-svg {
+            width: 100%;
+            height: 100%;
+            filter: drop-shadow(0 0 15px rgba(226, 188, 125, 0.3));
+        }
+
+        /* Highlighted countries styling */
+        #africa-svg path, 
+        #africa-svg g path {
+            fill: rgba(85, 85, 85, 0.5);
+            stroke: rgba(255, 255, 255, 0.5);
+            stroke-width: 1px;
+            transition: all var(--transition-fast);
+        }
+
+        #Kamerun, #Niger, #Burkina_Faso, #Gabun, #Senegal, #Mosambik {
+            fill: var(--secondary-color) !important;
+            stroke: #ffffff !important;
+            stroke-width: 1.5px !important;
+            filter: drop-shadow(0 0 5px rgba(226, 188, 125, 0.8));
+        }
+
+        .map-action-point {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: radial-gradient(circle, var(--secondary-color) 0%, var(--secondary-color) 40%, transparent 70%);
+            border-radius: 50%;
+            box-shadow: 0 0 15px 5px rgba(226, 188, 125, 0.6);
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transform: translate(-50%, -50%);
+            z-index: 5;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(226, 188, 125, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(226, 188, 125, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(226, 188, 125, 0);
+            }
+        }
+
+        .map-tooltip {
+            position: absolute;
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            min-width: 250px;
+            max-width: 300px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all var(--transition-medium);
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        .map-tooltip.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .map-tooltip h4 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 8px;
+        }
+
+        .map-tooltip p {
+            margin-bottom: 5px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .map-tooltip .project-title {
+            font-weight: 600;
+            color: var(--dark-color);
+        }
+
+        .map-tooltip .project-detail {
+            color: #666;
+        }
+
+        /* Positions for map points - adjust as needed */
+        #point-cameroun {
+            left: 51%;
+            top: 61%;
+        }
+        #point-niger {
+            left: 48%;
+            top: 42%;
+        }
+        #point-burkina {
+            left: 40%;
+            top: 48%;
+        }
+        #point-gabon {
+            left: 46%;
+            top: 66%;
+        }
+        #point-senegal {
+            left: 30%;
+            top: 45%;
+        }
+        #point-mozambique {
+            left: 68%;
+            top: 75%;
+        }
+
+        .hero-text {
+            flex: 0 0 48%;
+        }
+
+        .impact-tag {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .red-triangle {
+            color: var(--accent-color);
+            font-size: 14px;
+        }
+
+        .hero-text h1 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            letter-spacing: 1px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .hero-text h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+
+        .hero-text p {
+            margin-bottom: 30px;
+            font-size: 16px;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        /* Pool Conseils Section */
+        .section {
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+            justify-content: center;
+        }
+
+        .section-header h2 {
+            font-size: 18px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .section-title {
+            font-size: 36px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 50px;
+            color: var(--dark-color);
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+
+        /* Services Slider */
+        .services-container {
+            position: relative;
+            overflow: hidden;
+            padding: 0 10px;
+            margin-bottom: 30px;
+        }
+
+        .services-wrapper {
+            display: flex;
+            transition: transform var(--transition-medium);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            width: 100%;
+            flex-shrink: 0;
+        }
+
+        .service-card {
+            background-color: var(--light-color);
+            border-radius: 12px;
+            padding: 35px 25px;
+            text-align: center;
+            transition: all var(--transition-medium);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 0;
+            background-color: var(--primary-color);
+            transition: height var(--transition-medium);
+            z-index: -1;
+            opacity: 0;
+        }
+
+        .service-card:hover::before {
+            height: 100%;
+            opacity: 1;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            color: var(--light-color);
+        }
+
+        .service-card.active {
+            background-color: var(--primary-color);
+            color: var(--light-color);
+        }
+
+        .icon-circle {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all var(--transition-medium);
+        }
+
+        .service-card.active .icon-circle,
+        .service-card:hover .icon-circle {
+            border-color: rgba(255, 255, 255, 0.3);
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .service-card.active .icon-circle img,
+        .service-card:hover .icon-circle img {
+            filter: brightness(10);
+        }
+
+        .service-card h4 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            font-weight: 600;
+            transition: all var(--transition-medium);
+        }
+
+        .service-card p {
+            font-size: 15px;
+            line-height: 1.6;
+            transition: all var(--transition-medium);
+        }
+
+        .slider-controls {
+            display: none;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .slider-arrow {
+            background-color: var(--secondary-color);
+            color: var(--dark-color);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            border: none;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .slider-arrow:hover {
+            background-color: #d3ad6e;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .slider-arrow svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .slider-indicator {
+            font-weight: 600;
+            font-size: 18px;
+            color: var(--primary-color);
+        }
+
+        /* Vision Section */
+        .vision {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/Photos-du-Site Web/Section-Vision.png') center center/cover no-repeat;
+            color: var(--light-color);
+            position: relative;
+        }
+
+        .vision::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(69, 106, 101, 0.8) 0%, rgba(0, 0, 0, 0.8) 100%);
+            z-index: 1;
+        }
+
+        .vision-content {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .vision-text {
+            max-width: 600px;
+            background-color: rgba(69, 106, 101, 0.85);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+            transform: translateY(0);
+            transition: transform var(--transition-medium);
+        }
+
+        .vision-text:hover {
+            transform: translateY(-10px);
+        }
+
+        .vision-text h2 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .vision-text h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+
+        .vision-text p {
+            margin-bottom: 20px;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        /* Team Section */
+        .team {
+            background-color: var(--gray-color);
+        }
+
+        .team-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 50px;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .team-member {
+            text-align: center;
+            transition: all var(--transition-medium);
+            background-color: var(--light-color);
+            border-radius: 12px;
+            padding: 25px 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .team-member::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: var(--secondary-color);
+            transform: scaleX(0);
+            transition: transform var(--transition-medium);
+            transform-origin: right;
+        }
+
+        .team-member:hover::before {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .member-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 12px;
+            overflow: hidden;
+            margin: 0 auto 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border: 3px solid var(--light-color);
+            position: relative;
+        }
+
+        .member-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all var(--transition-medium);
+        }
+
+        .team-member:hover .member-photo img {
+            transform: scale(1.05);
+        }
+
+        .team-member h4 {
+            font-size: 18px;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: var(--primary-color);
+            transition: all var(--transition-fast);
+        }
+
+        .team-member:hover h4 {
+            color: var(--secondary-color);
+        }
+
+        .team-member p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .management-member {
+            text-align: center;
+            max-width: 300px;
+            margin: 0 auto;
+            transition: all var(--transition-medium);
+            background-color: var(--light-color);
+            border-radius: 12px;
+            padding: 30px 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .management-member::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: var(--secondary-color);
+            transform: scaleX(0);
+            transition: transform var(--transition-medium);
+            transform-origin: right;
+        }
+
+        .management-member:hover::before {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        .management-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Blog Section */
+        .blog {
+            background-color: var(--dark-color);
+            color: var(--light-color);
+        }
+
+        .blog .section-title {
+            color: var(--light-color);
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .blog-card {
+            background-color: var(--light-color);
+            border-radius: 12px;
+            overflow: hidden;
+            color: var(--dark-color);
+            transition: all var(--transition-medium);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            height: 100%;
+            position: relative;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .blog-image {
+            position: relative;
+            height: 240px;
+            overflow: hidden;
+        }
+
+        .blog-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all var(--transition-slow);
+        }
+
+        .blog-card:hover .blog-image img {
+            transform: scale(1.1);
+        }
+
+        .blog-category {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            background-color: var(--secondary-color);
+            color: var(--dark-color);
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            z-index: 2;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: all var(--transition-fast);
+        }
+
+        .blog-card:hover .blog-category {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .blog-content {
+            padding: 25px;
+            transition: all var(--transition-fast);
+            position: relative;
+        }
+
+        .blog-content::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background-color: var(--secondary-color);
+            transition: width var(--transition-medium);
+        }
+
+        .blog-card:hover .blog-content::before {
+            width: 100%;
+        }
+
+        .blog-date {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 12px;
+        }
+
+        .blog-card h4 {
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 1.4;
+            transition: all var(--transition-fast);
+        }
+
+        .blog-card:hover h4 {
+            color: var(--primary-color);
+        }
+
+        /* Partners Section */
+        .partners {
+            background-color: var(--gray-color);
+            text-align: center;
+        }
+
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .partner-logo {
+            background-color: var(--light-color);
+            border-radius: 12px;
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 160px;
+            transition: all var(--transition-medium);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .partner-logo:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .partner-logo img {
+            max-width: 80%;
+            max-height: 80%;
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: all var(--transition-medium);
+        }
+
+        .partner-logo:hover img {
+            filter: grayscale(0);
+            opacity: 1;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--primary-color);
+            color: var(--light-color);
+            padding: 60px 0 20px;
+            position: relative;
+        }
+
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), var(--primary-color));
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-logo img {
+            margin-bottom: 25px;
+            height: 70px;
+        }
+
+        .footer-info p {
+            margin-bottom: 20px;
+            font-size: 15px;
+            opacity: 0.9;
+            line-height: 1.7;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .footer-social a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transition: all var(--transition-medium);
+        }
+
+        .footer-social a:hover {
+            background-color: var(--secondary-color);
+            color: var(--dark-color);
+            transform: translateY(-5px) rotate(360deg);
+        }
+
+        .footer h4 {
+            font-size: 20px;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .footer h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--secondary-color);
+            transition: width var(--transition-medium);
+        }
+
+        .footer-links:hover h4::after,
+        .footer-contact:hover h4::after {
+            width: 100px;
+        }
+
+        .footer-links ul {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            list-style: none;
+        }
+
+        .footer-links a {
+            display: inline-block;
+            padding: 3px 0;
+            position: relative;
+            transition: all var(--transition-fast);
+        }
+
+        .footer-links a::before {
+            content: "→";
+            margin-right: 8px;
+            opacity: 0;
+            transform: translateX(-10px);
+            transition: all var(--transition-fast);
+        }
+
+        .footer-links a:hover::before {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary-color);
+            transform: translateX(5px);
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            align-items: flex-start;
+            transition: all var(--transition-fast);
+        }
+
+        .contact-item:hover {
+            transform: translateX(5px);
+        }
+
+        .contact-icon {
+            color: var(--secondary-color);
+            margin-top: 3px;
+        }
+
+        .contact-text {
+            flex: 1;
+        }
+
+        .contact-item:hover .contact-text {
+            color: var(--secondary-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 14px;
+        }
+
+        /* Chatbox */
+        .chatbox-container {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+        }
+
+        .chatbox-toggle {
+            width: 60px;
+            height: 60px;
+            background-color: var(--secondary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: all var(--transition-medium);
+            color: var(--dark-color);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .chatbox-toggle:hover {
+            transform: scale(1.1);
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .chatbox-greeting {
+            position: absolute;
+            top: -60px;
+            right: 0;
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            padding: 12px 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            width: 220px;
+            font-size: 14px;
+            opacity: 1;
+            transition: opacity var(--transition-medium), transform var(--transition-medium);
+            pointer-events: none;
+        }
+
+        .chatbox-greeting:after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            right: 24px;
+            width: 16px;
+            height: 16px;
+            background-color: var(--light-color);
+            transform: rotate(45deg);
+        }
+
+        .chatbox-greeting.hide {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        .chatbox {
+            position: absolute;
+            bottom: 80px;
+            right: 0;
+            width: 350px;
+            height: 500px;
+            background-color: var(--light-color);
+            border-radius: 15px;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
+            transform: scale(0);
+            opacity: 0;
+            transition: all var(--transition-medium);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .chatbox.active {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        .chatbox-header {
+            background-color: var(--primary-color);
+            color: var(--light-color);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .chatbox-body {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .chatbox-footer {
+            padding: 15px;
+            border-top: 1px solid #eee;
+        }
+
+        #chatbox-form {
+            display: flex;
+            gap: 10px;
+        }
+
+        #chatbox-input {
+            flex: 1;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            outline: none;
+            font-size: 16px;
+        }
+
+        #chatbox-input:focus {
+            border-color: var(--primary-color);
+        }
+
+        .chatbox-send {
+            background-color: var(--secondary-color);
+            color: var(--dark-color);
+            border: none;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+
+        .chatbox-send:hover {
+            background-color: #d3ad6e;
+            transform: scale(1.05);
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 110px;
+            width: 45px;
+            height: 45px;
+            background-color: var(--secondary-color);
+            color: var(--dark-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 99;
+            opacity: 0;
+            visibility: hidden;
+            transition: all var(--transition-medium);
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Splash Screen */
+        #splashscreen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: all var(--transition-medium);
+        }
+
+        #splashscreen.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .splash-content {
+            text-align: center;
+            animation: fadeInUp 1s ease forwards;
+        }
+
+        .splash-logo-img {
+            width: 250px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Chat messages styling */
+        .welcome-message {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .faq-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .faq-button {
+            background-color: #f5f5f5;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 20px;
+            text-align: left;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+
+        .faq-button:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .user-message, .bot-message {
+            margin-bottom: 15px;
+            max-width: 80%;
+        }
+
+        .user-message {
+            margin-left: auto;
+            text-align: right;
+        }
+
+        .user-message p {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 15px 15px 0 15px;
+            display: inline-block;
+        }
+
+        .bot-message p {
+            background-color: #f5f5f5;
+            padding: 10px 15px;
+            border-radius: 15px 15px 15px 0;
+            display: inline-block;
+        }
+
+        /* Mobile Menu Styles */
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -300px;
+            width: 280px;
+            height: 100vh;
+            background-color: var(--dark-color);
+            z-index: 100;
+            transition: right var(--transition-medium);
+            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+            padding: 80px 20px 30px;
+            overflow-y: auto;
+        }
+
+        .mobile-menu.active {
+            right: 0;
+        }
+
+        .mobile-menu-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 30px;
+            height: 30px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--light-color);
+            font-size: 24px;
+        }
+
+        .mobile-menu-list {
+            list-style: none;
+        }
+
+        .mobile-menu-item {
+            margin-bottom: 15px;
+        }
+
+        .mobile-menu-link {
+            color: var(--light-color);
+            font-size: 18px;
+            display: block;
+            padding: 10px 5px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all var(--transition-fast);
+        }
+
+        .mobile-menu-link:hover {
+            color: var(--secondary-color);
+            padding-left: 10px;
+        }
+
+        .mobile-dropdown {
+            margin-top: 8px;
+            display: none;
+            padding-left: 15px;
+        }
+
+        .mobile-dropdown.active {
+            display: block;
+        }
+
+        .mobile-dropdown-link {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 16px;
+            display: block;
+            padding: 8px 5px;
+            transition: all var(--transition-fast);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .mobile-dropdown-link:hover {
+            color: var(--secondary-color);
+            padding-left: 8px;
+        }
+
+        .dropdown-toggle-mobile {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .dropdown-icon {
+            transition: transform var(--transition-fast);
+        }
+
+        .dropdown-toggle-mobile.active .dropdown-icon {
+            transform: rotate(180deg);
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1024px) {
+            .hero-content {
+                flex-direction: column;
+            }
+
+            .africa-map, .hero-text {
+                flex: 0 0 100%;
+            }
+
+            .map-container {
+                height: 400px;
+            }
+
+            .hero-text {
+                text-align: center;
+                margin-bottom: 30px;
+            }
+
+            .hero-text .impact-tag {
+                justify-content: center;
+            }
+
+            .hero-text h1::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .vision-content {
+                justify-content: center;
+            }
+
+            .vision-text {
+                max-width: 90%;
+            }
+
+            .team-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                height: 70px;
+            }
+
+            .logo img {
+                height: 50px;
+            }
+
+            .main-nav {
+                display: none;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+                width: 100%;
+            }
+
+            .slider-controls {
+                display: flex;
+            }
+
+            .section {
+                padding: 60px 0;
+            }
+
+            .section-title {
+                font-size: 30px;
+            }
+
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .partners-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .partner-logo {
+                height: 120px;
+            }
+
+            .top-bar .container {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 5px;
+                align-items: center;
+            }
+
+            .top-bar {
+                padding: 15px 0;
+            }
+
+            .hero {
+                min-height: auto;
+            }
+
+            .hero-content {
+                padding: 50px 0;
+            }
+
+            .hero-text h1 {
+                font-size: 32px;
+            }
+
+            .chatbox {
+                width: 300px;
+                height: 450px;
+                bottom: 70px;
+            }
+
+            .chatbox-container {
+                bottom: 20px;
+                right: 20px;
+            }
+
+            .back-to-top {
+                right: 90px;
+                bottom: 20px;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .footer {
+                padding: 40px 0 20px;
+            }
+
+            .footer-logo img {
+                height: 60px;
+                margin-bottom: 15px;
+            }
+
+            .footer-info p {
+                margin-bottom: 15px;
+            }
+
+            .footer h4 {
+                font-size: 18px;
+                margin-bottom: 15px;
+                padding-bottom: 10px;
+            }
+
+            .contact-item {
+                margin-bottom: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header .container {
+                padding: 0 15px;
+            }
+
+            .hero-text h1 {
+                font-size: 28px;
+            }
+
+            .map-container {
+                height: 350px;
+            }
+
+            .btn {
+                width: 100%;
+                padding: 15px;
+            }
+
+            .service-card, .blog-card, .team-member {
+                padding: 20px 15px;
+            }
+
+            .icon-circle {
+                width: 70px;
+                height: 70px;
+            }
+
+            .member-photo {
+                width: 150px;
+                height: 150px;
+            }
+
+            .chatbox {
+                width: calc(100vw - 40px);
+                right: -20px;
+            }
+
+            .footer-social {
+                justify-content: center;
+            }
+
+            .footer-links ul {
+                align-items: center;
+            }
+
+            .footer-links a::before {
+                display: none;
+            }
+
+            .footer-links a:hover {
+                transform: none;
+            }
+
+            .contact-item {
+                justify-content: center;
+            }
+
+            .contact-item:hover {
+                transform: none;
+            }
+
+            .footer-bottom {
+                font-size: 12px;
+            }
+        }
+    </style>
 </head>
 <body>
+    <!-- Splashscreen -->
     <div id="splashscreen">
         <div class="splash-content">
-            <div class="splash-logo">
-                <img src="images/Photos-du-Site Web/Logo-site.png" alt="Logo" class="splash-logo-img splash-animate" />
-            </div>
+            <img src="images/Photos-du-Site Web/Logo-site.png" alt="Logo" class="splash-logo-img" />
         </div>
     </div>
 
@@ -37,11 +1871,15 @@
     <div class="top-bar">
         <div class="container">
             <div class="social-icons">
-                <a href="#" class="social-icon linkedin"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/></svg></a>
-                <a href="#" class="social-icon twitter"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"/></svg></a>
+                <a href="#" class="social-icon linkedin">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/></svg>
+                </a>
+                <a href="#" class="social-icon twitter">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"/></svg>
+                </a>
             </div>
             <div class="contact-info">
-                <a href="mailto:Info@Linksyscapital.Com" class="email">Info@Linksyscapital.Com</a>
+                <a href="/cdn-cgi/l/email-protection#4c05222a230c002522273f353f2f2d3c25382d20620f2321" class="email"><span class="__cf_email__" data-cfemail="8cd4e3ebe2cdc1e4e3e6fef4feeeecfde4f9ece1a3cee2e0">[email&#160;protected]</span></a>
                 <span class="separator">|</span>
                 <a href="tel:+689893487" class="phone">689 89 34 87 - 653 90 29 74</a>
             </div>
@@ -49,8 +1887,8 @@
     </div>
 
     <!-- Header -->
-    <header class="header" id="main-header">
-        <div class="container">
+    <header class="header animated-scroll fade-down text-modern" id="main-header">
+        <div class="container animated-scroll fade-up">
             <div class="logo">
                 <a href="index.html">
                     <img src="images/Photos-du-Site Web/Logo-site.png" alt="Linksys Capital Advisory">
@@ -61,7 +1899,7 @@
                     <li><a href="#">Accueil</a></li>
                     <li><a href="#">Qui Sommes-Nous ?</a></li>
                     <li class="dropdown">
-                        <a href="#">Pool Conseils <span class="dropdown-arrow">▼</span></a>
+                        <a href="#" class="dropdown-toggle">Pool Conseils <span class="dropdown-arrow">▼</span></a>
                         <ul class="dropdown-menu">
                             <li><a href="#">Pool Entreprises</a></li>
                             <li><a href="#">Pool Investisseurs</a></li>
@@ -73,10 +1911,12 @@
                 </ul>
             </nav>
             <div class="header-right">
-                <button class="search-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/></svg>
-                </button>
-                <a href="#" class="btn btn-primary">START CONSULT</a>
+                <a href="#" class="btn btn-primary animated-scroll fade-right">
+                    <span>
+                        START CONSULT
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg>
+                    </span>
+                </a>
             </div>
             <button class="mobile-menu-toggle">
                 <span></span>
@@ -86,215 +1926,247 @@
         </div>
     </header>
 
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <button class="mobile-menu-close">&times;</button>
+        <ul class="mobile-menu-list">
+            <li class="mobile-menu-item"><a href="#" class="mobile-menu-link">Accueil</a></li>
+            <li class="mobile-menu-item"><a href="#" class="mobile-menu-link">Qui Sommes-Nous ?</a></li>
+            <li class="mobile-menu-item">
+                <a href="#" class="mobile-menu-link dropdown-toggle-mobile">
+                    Pool Conseils <span class="dropdown-icon">▼</span>
+                </a>
+                <ul class="mobile-dropdown">
+                    <li><a href="#" class="mobile-dropdown-link">Pool Entreprises</a></li>
+                    <li><a href="#" class="mobile-dropdown-link">Pool Investisseurs</a></li>
+                    <li><a href="#" class="mobile-dropdown-link">Pool Gouvernements</a></li>
+                </ul>
+            </li>
+            <li class="mobile-menu-item"><a href="#" class="mobile-menu-link">Blog</a></li>
+            <li class="mobile-menu-item"><a href="#" class="mobile-menu-link">Contact</a></li>
+        </ul>
+    </div>
+
     <!-- Hero Section -->
-    <section class="hero fade-in-scroll">
-        <img class="hero-bg-img" src="images/Photos-du-Site Web/Carroussel 2.jpeg" alt="Fond Hero Noir et Blanc" loading="lazy" />
-        <div class="hero-slider">
-            <div class="hero-slide active">
-                <div class="container">
-                    <div class="hero-content">
-                        <div class="africa-map floating-map zoom-in-scroll" data-aos="fade-right" data-aos-duration="1000">
-                            <div id="interactive-map">
-                                <div class="map-container">
-                                    <!-- SVG importé -->
-                                    <object id="africa-svg" class="africa-neon parallax-img" type="image/svg+xml" data="africa-map-svgrepo-com.svg" width="500" height="450" style="display:block;margin:auto;"></object>
-                                    <!-- Points d'action Lynksis -->
-                                    <div class="map-action-point" id="point-cameroun" data-name="Cameroun" data-project="Levées de Fonds, Collaboration Farine locale, Fondation Mika" data-detail="Gestion du portefeuille, structuration filière, œuvres caritatives"></div>
-                                    <div class="map-action-point" id="point-niger" data-name="Niger" data-project="Levées de Fonds" data-detail="Gestion du portefeuille, Levées de Fonds"></div>
-                                    <div class="map-action-point" id="point-burkina" data-name="Burkina Faso" data-project="Levées de Fonds" data-detail="Levées de Fonds"></div>
-                                    <div class="map-action-point" id="point-gabon" data-name="Gabon" data-project="Gestion du portefeuille résiduel" data-detail="Gestion du portefeuille"></div>
-                                    <div class="map-action-point" id="point-senegal" data-name="Sénégal" data-project="Gestion du portefeuille, Levées de Fonds" data-detail="Gestion du portefeuille, Levées de Fonds"></div>
-                                    <div class="map-action-point" id="point-mozambique" data-name="Mozambique" data-project="Gestion du portefeuille résiduel" data-detail="Gestion du portefeuille"></div>
-                                    <!-- Tooltip -->
-                                    <div id="tooltip" class="map-tooltip">
-                                        <h4 class="country-name"></h4>
-                                        <p class="project-title"></p>
-                                        <p class="project-detail"></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="hero-text slide-in-left fade-in-scroll" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
-                            <div class="impact-tag">
-                                <span class="red-triangle">&#9650;</span>
-                                <span>IMPACT INVESTMENTS FOR AFRICA</span>
-                            </div>
-                            <h1 class="typewriter-hero">LINKSYS CAPITAL ADVISORY</h1>
-                            <p class="fade-in-scroll">est une société de Gestion de Fonds (Fund Manager), établie au Cameroun, spécialisée dans les investissements à fort impact social, environnemental et financier en Afrique.</p>
-                            <a href="#" class="btn btn-secondary fade-in-scroll">
-                                EN SAVOIR + 
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg>
-                            </a>
+    <section class="hero">
+        <img class="hero-bg-img" src="images/Photos-du-Site Web/Carroussel 2.jpeg" alt="Fond Hero" loading="lazy" />
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text animated-scroll fade-right text-modern">
+                    <div class="impact-tag">
+                        <span class="red-triangle">&#9650;</span>
+                        <span>IMPACT INVESTMENTS FOR AFRICA</span>
+                    </div>
+                    <h1 animated-scroll fade-right text-modern>LINKSYS CAPITAL ADVISORY</h1>
+                    <p animated-scroll fade-up text-modern>est une société de Gestion de Fonds (Fund Manager), établie au Cameroun, spécialisée dans les investissements à fort impact social, environnemental et financier en Afrique.</p>
+                    <a href="#" class="btn btn-primary animated-scroll fade-right">
+                        <span>
+                            EN SAVOIR PLUS
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg>
+                        </span>
+                    </a>
+                </div>
+                <div class="africa-map">
+                    <div class="map-container">
+                        <!-- SVG Map -->
+                        <svg id="africa-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1230">
+                            <!-- SVG paths will be loaded dynamically -->
+                        </svg>
+
+                        <!-- Points d'action Lynksis -->
+                        <div class="map-action-point" id="point-cameroun" data-name="Cameroun" data-project="Levées de Fonds, Collaboration Farine locale, Fondation Mika" data-detail="Gestion du portefeuille, structuration filière, œuvres caritatives" style="top:45%;left:45%;"></div>
+                        <div class="map-action-point" id="point-niger" data-name="Niger" data-project="Levées de Fonds" data-detail="Gestion du portefeuille, Levées de Fonds" style="top:27%;left:40%;"></div>
+                        <div class="map-action-point" id="point-burkina" data-name="Burkina Faso" data-project="Levées de Fonds" data-detail="Levées de Fonds" style="top:35%;left:27%;"></div>
+                        <div class="map-action-point" id="point-gabon" data-name="Gabon" data-project="Gestion du portefeuille résiduel" data-detail="Gestion du portefeuille" style="top:53%;left:45%;"></div>
+                        <div class="map-action-point" id="point-senegal" data-name="Sénégal" data-project="Gestion du portefeuille, Levées de Fonds" data-detail="Gestion du portefeuille, Levées de Fonds" style="top:29%;left:10%;"></div>
+                        <div class="map-action-point" id="point-mozambique" data-name="Mozambique" data-project="Gestion du portefeuille résiduel" data-detail="Gestion du portefeuille" style="top:75%;left:70%;"></div>
+
+                        <!-- Tooltip -->
+                        <div id="tooltip" class="map-tooltip">
+                            <h4 class="country-name"></h4>
+                            <p class="project-title"></p>
+                            <p class="project-detail"></p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="hero-controls">
-            <button class="hero-control active"></button>
-            <!-- Ajoutez plus de boutons si nécessaire pour d'autres slides -->
         </div>
     </section>
 
     <!-- Pool Conseils Section -->
-    <section class="pool-conseils fade-in-scroll">
-        <div class="container">
-            <div class="section-header slide-in-left" data-aos="fade-up" data-aos-duration="800">
+    <section class="section animated-scroll fade-up">
+        <div class="container animated-scroll fade-up">
+            <div class="section-header">
                 <div class="red-triangle">&#9650;</div>
-                <h2>POOL CONSEILS</h2>
+                <h2 animated-scroll fade-left text-modern>POOL CONSEILS</h2>
             </div>
-            <h3 class="zoom-in-scroll" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">Pourquoi Nous Consulter</h3>
-            
-            <div class="services-grid">
-                <div class="service-card fade-in-scroll" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
-                    <div class="icon-circle parallax-img">
-                        <img src="images/icon-buildings.svg" alt="Gouvernements Icon">
+            <h3 class="section-title animated-scroll fade-up text-modern">Pourquoi Nous Consulter</h3>
+
+            <div class="services-container">
+                <div class="services-wrapper">
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <div class="icon-circle">
+                                <img src="images/icon-buildings.svg" alt="Gouvernements Icon" width="50" height="50">
+                            </div>
+                            <h4 animated-scroll fade-up text-modern>GOUVERNEMENTS</h4>
+                            <p animated-scroll fade-up text-modern>Accompagnement Stratégique et Institutionnel<br>
+                            Assistance Technique · Projets Structurants<br>
+                            Levées De Fonds</p>
+                        </div>
+
+                        <div class="service-card active">
+                            <div class="icon-circle">
+                                <img src="images/icon-finance.svg" alt="Financement Icon" width="50" height="50">
+                            </div>
+                            <h4 animated-scroll fade-up text-modern>FINANCEMENT</h4>
+                            <p animated-scroll fade-up text-modern>LINKSYS CAPITAL ADVISORY RECHERCHE ACTUELLEMENT PLUS DE USD 500 MILLIONS POUR SES PARTENAIRES</p>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="icon-circle">
+                                <img src="images/icon-experts.svg" alt="Experts Icon" width="50" height="50">
+                            </div>
+                            <h4 animated-scroll fade-up text-modern>EXPERTS</h4>
+                            <p animated-scroll fade-up text-modern>VOUS ÊTES UN EXPERT DANS VOTRE DOMAINE D'ACTIVITÉS ET INTÉRESSÉ PAR L'ACTION DE LINKSYS CAPITAL EN AFRIQUE. LAISSEZ-NOUS VOTRE CV</p>
+                        </div>
                     </div>
-                    <h4>GOUVERNEMENTS</h4>
-                    <p>Accompagnement Stratégique et Institutionnel<br>
-                    Assistance Technique · Projets Structurants<br>
-                    Levées De Fonds</p>
                 </div>
-                
-                <div class="service-card active fade-in-scroll" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
-                    <div class="icon-circle parallax-img">
-                        <img src="images/icon-finance.svg" alt="Financement Icon">
+
+                <div class="slider-controls">
+                    <button class="slider-arrow prev-slide">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+                        </svg>
+                    </button>
+                    <div class="slider-indicator">
+                        <span id="current-slide">1</span>/<span id="total-slides">3</span>
                     </div>
-                    <h4>FINANCEMENT</h4>
-                    <p>LINKSYS CAPITAL ADVISORY RECHERCHE ACTUELLEMENT PLUS DE USD 500 MILLIONS POUR SES PARTENAIRES</p>
+                    <button class="slider-arrow next-slide">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                    </button>
                 </div>
-                
-                <div class="service-card fade-in-scroll" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700">
-                    <div class="icon-circle parallax-img">
-                        <img src="images/icon-experts.svg" alt="Experts Icon">
-                    </div>
-                    <h4>EXPERTS</h4>
-                    <p>VOUS ÊTES UN EXPERT DANS VOTRE DOMAINE D'ACTIVITÉS ET INTÉRESSÉ PAR L'ACTION DE LINKSYS CAPITAL EN AFRIQUE. LAISSEZ-NOUS VOTRE CV</p>
-                </div>
-            </div>
-            
-            <div class="slider-controls">
-                <button class="prev-btn">&#8592;</button>
-                <button class="next-btn">&#8594;</button>
             </div>
         </div>
     </section>
 
     <!-- Vision Section -->
-    <section class="vision fade-in-scroll vision-bg">
-        <div class="container">
+    <section class="section vision animated-scroll fade-up">
+        <div class="container animated-scroll fade-up">
             <div class="vision-content">
-                <div class="vision-text-container slide-in-left" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
-                    <div class="vision-text">
-                        <div class="impact-tag">
-                            <span class="red-triangle">&#9650;</span>
-                            <span>LINKSYS CAPITAL ADVISORY</span>
-                        </div>
-                        <h2>VISION</h2>
-                        <p>Nous pensons que tout effort visant à réduire la pauvreté en Afrique doit avoir à la base, la promotion de l'entrepreneuriat au sein du secteur Informel.</p>
-                        <p>Notre vision est de mobiliser des capitaux afin de soutenir les entrepreneurs et initiatives économiques comme moyens de parvenir à la croissance et à la durabilité d'une manière respectueuse de l'environnement, tout en offrant des rendements financiers élevés aus Investisseurs.</p>
-                        <a href="#" class="btn btn-secondary">
-                            EN SAVOIR + 
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg>
-                        </a>
+                <div class="vision-text animated-scroll fade-right text-modern">
+                    <div class="impact-tag">
+                        <span class="red-triangle">&#9650;</span>
+                        <span>LINKSYS CAPITAL ADVISORY</span>
                     </div>
+                    <h2 animated-scroll fade-right text-modern>VISION</h2>
+                    <p animated-scroll fade-up text-modern>Nous pensons que tout effort visant à réduire la pauvreté en Afrique doit avoir à la base, la promotion de l'entrepreneuriat au sein du secteur Informel.</p>
+                    <p animated-scroll fade-up text-modern>Notre vision est de mobiliser des capitaux afin de soutenir les entrepreneurs et initiatives économiques comme moyens de parvenir à la croissance et à la durabilité d'une manière respectueuse de l'environnement, tout en offrant des rendements financiers élevés aux Investisseurs.</p>
+                    <a href="#" class="btn btn-primary animated-scroll fade-right">
+                        <span>
+                            EN SAVOIR PLUS
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg>
+                        </span>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Team Section -->
-    <section class="team fade-in-scroll">
-        <div class="container">
-            <div class="section-header slide-in-left" data-aos="fade-up" data-aos-duration="800">
+    <section class="section team animated-scroll fade-up">
+        <div class="container animated-scroll fade-up">
+            <div class="section-header">
                 <div class="red-triangle">&#9650;</div>
-                <h2>NOTRE EQUIPE</h2>
+                <h2 animated-scroll fade-left text-modern>NOTRE EQUIPE</h2>
             </div>
-            <p class="team-intro zoom-in-scroll" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">L'équipe principale possède une vaste expérience dans les domaines du capital investissement, de la banque d'investissement, de la gestion financière et du conseil en gestion. Cette équipe établie et expérimentée apporte à Linksys capital advisory un énorme avantage concurrentiel pour toute intervention dans l'environnement socioéconomique en Afrique</p>
-            
-            <h3 class="fade-in-scroll" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">TOP MANAGEMENT</h3>
-            
+            <p class="team-intro animated-scroll fade-up text-modern">L'équipe principale possède une vaste expérience dans les domaines du capital investissement, de la banque d'investissement, de la gestion financière et du conseil en gestion. Cette équipe établie et expérimentée apporte à Linksys capital advisory un énorme avantage concurrentiel pour toute intervention dans l'environnement socioéconomique en Afrique</p>
+
+            <h3 class="section-title animated-scroll fade-up text-modern">TOP MANAGEMENT</h3>
+
             <div class="team-grid">
-                <div class="team-member fade-in-scroll" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
-                    <div class="member-photo parallax-img">
+                <div class="team-member">
+                    <div class="member-photo">
                         <img src="images/Photos-du-Site Web/Jean Claude EBE EVINA, Président.png" alt="Jean Claude EBE EVINA">
                     </div>
-                    <h4>Jean Claude EBE EVINA,</h4>
-                    <p>Président</p>
+                    <h4 animated-scroll fade-up text-modern>Jean Claude EBE EVINA</h4>
+                    <p animated-scroll fade-up text-modern>Président</p>
                 </div>
-                
-                <div class="team-member fade-in-scroll" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
-                    <div class="member-photo parallax-img">
+
+                <div class="team-member">
+                    <div class="member-photo">
                         <img src="images/Photos-du-Site Web/Henri Blaise TIAM, Managing Partner.png" alt="Henri Blaise TIAM">
                     </div>
-                    <h4>Henri Blaise TIAM</h4>
-                    <p>Managing Partner</p>
+                    <h4 animated-scroll fade-up text-modern>Henri Blaise TIAM</h4>
+                    <p animated-scroll fade-up text-modern>Managing Partner</p>
                 </div>
-                
-                <div class="team-member fade-in-scroll" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
-                    <div class="member-photo parallax-img">
+
+                <div class="team-member">
+                    <div class="member-photo">
                         <img src="images/Photos-du-Site Web/Didier ZING, Administrateur.png" alt="Didier ZING">
                     </div>
-                    <h4>Didier ZING</h4>
-                    <p>Administrateur</p>
+                    <h4 animated-scroll fade-up text-modern>Didier ZING</h4>
+                    <p animated-scroll fade-up text-modern>Administrateur</p>
                 </div>
-                
-                <div class="team-member fade-in-scroll" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700">
-                    <div class="member-photo parallax-img">
+
+                <div class="team-member">
+                    <div class="member-photo">
                         <img src="images/Photos-du-Site Web/Eric ELOUNDOU, Administrateur.png" alt="Eric ELOUNDOU">
                     </div>
-                    <h4>Eric ELOUNDOU</h4>
-                    <p>Administrateur</p>
+                    <h4 animated-scroll fade-up text-modern>Eric ELOUNDOU</h4>
+                    <p animated-scroll fade-up text-modern>Administrateur</p>
                 </div>
             </div>
-            
-            <h3 class="fade-in-scroll" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">MANAGEMENT</h3>
-            
-            <div class="management-member fade-in-scroll" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
-                <div class="member-photo parallax-img">
+
+            <h3 class="section-title animated-scroll fade-up text-modern">MANAGEMENT</h3>
+
+            <div class="management-member">
+                <div class="member-photo">
                     <img src="images/Photos-du-Site Web/Yves Alain SECKE Consultant Formateur expert en management financier.jpeg" alt="Yves Alain SECKE">
                 </div>
-                <h4>Yves Alain SECKE</h4>
-                <p>Consultant Formateur expert en management financier</p>
+                <h4 animated-scroll fade-up text-modern>Yves Alain SECKE</h4>
+                <p animated-scroll fade-up text-modern>Consultant Formateur expert en management financier</p>
             </div>
         </div>
     </section>
 
     <!-- Blog Section -->
-    <section class="blog fade-in-scroll">
-        <div class="container">
-            <div class="section-header slide-in-left" data-aos="fade-up" data-aos-duration="800">
+    <section class="section blog animated-scroll fade-up">
+        <div class="container animated-scroll fade-up">
+            <div class="section-header">
                 <div class="red-triangle">&#9650;</div>
-                <h2>BLOG</h2>
+                <h2 animated-scroll fade-left text-modern>BLOG</h2>
             </div>
-            <h3 class="zoom-in-scroll" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">Publication</h3>
-            
+            <h3 class="section-title animated-scroll fade-up text-modern">Publication</h3>
+
             <div class="blog-grid">
-                <div class="blog-card fade-in-scroll" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
-                    <div class="blog-image parallax-img">
+                <div class="blog-card">
+                    <div class="blog-image">
                         <img src="images/Photos-du-Site Web/Blog 1.jpeg" alt="Énergies Renouvelable">
                         <div class="blog-category">ENERGIES RENOUVELABLE</div>
                     </div>
                     <div class="blog-content">
                         <div class="blog-date">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/></svg>
-                            MARCH 16, 2025
+                            16 MARS 2024
                         </div>
-                        <h4>Énergies Renouvelable : État Des Lieux En Afrique</h4>
+                        <h4 animated-scroll fade-up text-modern>Énergies Renouvelable : État Des Lieux En Afrique</h4>
                     </div>
                 </div>
-                
-                <div class="blog-card fade-in-scroll" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
-                    <div class="blog-image parallax-img">
+
+                <div class="blog-card">
+                    <div class="blog-image">
                         <img src="images/Photos-du-Site Web/Blog 2.jpeg" alt="Banque">
                         <div class="blog-category">FINANCE</div>
                     </div>
                     <div class="blog-content">
                         <div class="blog-date">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/></svg>
-                            MARCH 16, 2025
+                            10 FÉVRIER 2024
                         </div>
-                        <h4>Banque : État Des Lieux En Afrique</h4>
+                        <h4 animated-scroll fade-up text-modern>Banque : État Des Lieux En Afrique</h4>
                     </div>
                 </div>
             </div>
@@ -302,19 +2174,19 @@
     </section>
 
     <!-- Partners Section -->
-    <section class="partners">
-        <div class="container">
-            <h3 data-aos="fade-up" data-aos-duration="800">Nos Partenaires</h3>
-            
+    <section class="section partners animated-scroll fade-up">
+        <div class="container animated-scroll fade-up">
+            <h3 class="section-title animated-scroll fade-up text-modern">Nos Partenaires</h3>
+
             <div class="partners-grid">
-                <div class="partner-logo fade-in-scroll" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
-                    <img class="partner-anim" src="images/Photos-du-Site Web/Huckabee.png" alt="Huckabee">
+                <div class="partner-logo">
+                    <img src="images/Photos-du-Site Web/Huckabee.png" alt="Huckabee">
                 </div>
-                <div class="partner-logo fade-in-scroll" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
-                    <img class="partner-anim" src="images/Photos-du-Site Web/Jacobs.png" alt="Jacobs">
+                <div class="partner-logo">
+                    <img src="images/Photos-du-Site Web/Jacobs.png" alt="Jacobs">
                 </div>
-                <div class="partner-logo fade-in-scroll" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
-                    <img class="partner-anim" src="images/Photos-du-Site Web/Clarifai.png" alt="Clarifai">
+                <div class="partner-logo">
+                    <img src="images/Photos-du-Site Web/Clarifai.png" alt="Clarifai">
                 </div>
             </div>
         </div>
@@ -324,8 +2196,11 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="images/Photos-du-Site Web/Logo-white.png" alt="Linksys Capital Advisory">
+                <div class="footer-info">
+                    <div class="footer-logo">
+                        <img src="images/Photos-du-Site Web/Logo-white.png" alt="Linksys Capital Advisory">
+                    </div>
+                    <p animated-scroll fade-up text-modern>Société de Gestion de Fonds établie au Cameroun, spécialisée dans les investissements à fort impact social, environnemental et financier en Afrique.</p>
                     <div class="footer-social">
                         <a href="#" class="social-icon twitter">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"/></svg>
@@ -335,9 +2210,9 @@
                         </a>
                     </div>
                 </div>
-                
+
                 <div class="footer-links">
-                    <h4>Liens Rapides</h4>
+                    <h4 animated-scroll fade-up text-modern>Liens Rapides</h4>
                     <ul>
                         <li><a href="#">Qui Sommes-Nous</a></li>
                         <li><a href="#">Pool Entreprises</a></li>
@@ -347,71 +2222,42 @@
                         <li><a href="#">Contact</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-contact">
-                    <h4>Contact</h4>
+                    <h4 animated-scroll fade-up text-modern>Contact</h4>
                     <div class="contact-item">
                         <div class="contact-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
                         </div>
                         <div class="contact-text">
-                            <strong>Address:</strong> Villa La Rose, 2e Étage<br>
+                            Villa La Rose, 2e Étage<br>
                             40, Rue 1079 - Quartier Hippodrome<br>
                             Yaoundé - Cameroun
                         </div>
                     </div>
-                    
+
                     <div class="contact-item">
                         <div class="contact-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/></svg>
                         </div>
                         <div class="contact-text">
-                            <strong>Email:</strong> Info@Linksyscapital.Com
+                            <a href="/cdn-cgi/l/email-protection#4c05222a230c002522273f353f2f2d3c25382d20620f2321" class="__cf_email__" data-cfemail="8cd4e3ebe2cdc1e4e3e6fef4feeeecfde4f9ece1a3cee2e0">[email&#160;protected]</a>
                         </div>
                     </div>
-                    
+
                     <div class="contact-item">
                         <div class="contact-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M3.654 1.328a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/></svg>
                         </div>
                         <div class="contact-text">
-                            <strong>Phone:</strong> 689 89 34 87 - 653 90 29 74
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
-                        </div>
-                        <div class="contact-text">
-                            <strong>Work Time:</strong> Mon-Fri: 08:00 - 16:00
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="footer-images">
-                    <div class="vertical-carousel">
-                        <div class="carousel-container">
-                            <div class="carousel-track">
-                                <img src="images/Photos-du-Site Web/Carroussel 1.jpeg" alt="Carroussel 1">
-                                <img src="images/Photos-du-Site Web/Carroussel 2.jpeg" alt="Carroussel 2">
-                                <img src="images/Photos-du-Site Web/Carroussel 3.jpeg" alt="Carroussel 3">
-                                <img src="images/Photos-du-Site Web/Carroussel 1.jpeg" alt="Carroussel 1">
-                                <img src="images/Photos-du-Site Web/Carroussel 2.jpeg" alt="Carroussel 2">
-                                <img src="images/Photos-du-Site Web/Carroussel 3.jpeg" alt="Carroussel 3">
-                            </div>
-                            <div class="carousel-dots-vertical">
-                                <span class="dot dot-gold"></span>
-                                <span class="dot dot-gray"></span>
-                                <span class="dot dot-dark"></span>
-                            </div>
+                            689 89 34 87 - 653 90 29 74
                         </div>
                     </div>
                 </div>
             </div>
-            
+
             <div class="footer-bottom">
-                <p>&copy; 2024 LINKSYS CAPITAL.</p>
+                <p animated-scroll fade-up text-modern>&copy; 2024 LINKSYS CAPITAL. Tous droits réservés.</p>
             </div>
         </div>
     </footer>
@@ -419,18 +2265,16 @@
     <!-- Chatbox Lynka -->
     <div class="chatbox-container">
         <div class="chatbox-toggle">
-            <div class="chatbox-toggle-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
-                    <path d="M8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6-.097 1.016-.417 2.13-.771 2.966-.079.186.074.394.273.362 2.256-.37 3.597-.938 4.18-1.234A9.06 9.06 0 0 0 8 15z"/>
-                </svg>
-            </div>
-            <div class="chatbox-greeting" id="chatbox-greeting">Hello, comment puis-je vous aider ?</div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6-.097 1.016-.417 2.13-.771 2.966-.079.186.074.394.273.362 2.256-.37 3.597-.938 4.18-1.234A9.06 9.06 0 0 0 8 15z"/>
+            </svg>
+            <div class="chatbox-greeting" id="chatbox-greeting">Bonjour, comment puis-je vous aider ?</div>
         </div>
         <div class="chatbox">
             <div class="chatbox-header">
                 <div class="chatbox-title">
-                    <h3>Lynka</h3>
-                    <p>Assistante virtuelle</p>
+                    <h3 animated-scroll fade-up text-modern>Lynka</h3>
+                    <p animated-scroll fade-up text-modern>Assistante virtuelle</p>
                 </div>
                 <button class="chatbox-close">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
@@ -439,47 +2283,27 @@
                 </button>
             </div>
             <div class="chatbox-body">
-                <div class="chatbox-welcome">
-                    <div class="lynka-avatar">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" viewBox="0 0 16 16">
-                            <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
-                        </svg>
-                    </div>
-                    <div class="welcome-message">
-                        <p>Bonjour ! Je suis Lynka, Comment puis-je vous aider aujourd'hui ?</p>
-                    </div>
-                </div>
-                <div class="chatbox-faq">
-                    <p>Questions fréquentes :</p>
-                    <div class="faq-buttons">
-                        <button class="faq-button" data-question="Que fait votre entreprise ?">Que fait votre entreprise ?</button>
-                        <button class="faq-button" data-question="Où êtes-vous basés ?">Où êtes-vous basés ?</button>
-                        <button class="faq-button" data-question="Comment vous contacter ?">Comment vous contacter ?</button>
-                        <button class="faq-button" data-question="Quels sont vos domaines d'investissement ?">Quels sont vos domaines d'investissement ?</button>
-                    </div>
-                </div>
-                <div class="chatbox-messages"></div>
+                <!-- Chat content will be added here -->
             </div>
             <div class="chatbox-footer">
                 <form id="chatbox-form">
                     <input type="text" id="chatbox-input" placeholder="Écrivez votre message...">
                     <button type="submit" class="chatbox-send">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                            <path d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083l6-15Zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471-.47 1.178Z"/>
-                    </svg>
-                </button>
-            </form>
+                            <path d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083l6-15Zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 1 .154-.154l-.338-.215 7.494-7.494 1.178-.471-.47 1.178Z"/>
+                        </svg>
+                    </button>
+                </form>
+            </div>
         </div>
     </div>
-</div>
 
     <!-- Back to Top Button -->
     <a href="#" class="back-to-top">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 0 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/></svg>
     </a>
 
-    <!-- AOS Animation Library -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
